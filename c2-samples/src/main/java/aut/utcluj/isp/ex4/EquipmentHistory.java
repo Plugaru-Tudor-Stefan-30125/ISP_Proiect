@@ -12,7 +12,7 @@ public class EquipmentHistory {
     /**
      * Add new history details
      *
-     * @param owner        - ownen
+     * @param owner        - owner
      * @param operation    - operation ({@link Operation})
      * @param providedDate - provided date of the operation
      */

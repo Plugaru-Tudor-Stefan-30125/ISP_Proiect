@@ -5,9 +5,12 @@ package aut.utcluj.isp.ex2;
  */
 public class Notebook {
     private String osVersion;
+    private String name, serialNumber;
 
     public Notebook(String name, String serialNumber, String osVersion) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.name = name;
+        this.osVersion = osVersion;
+        this.serialNumber = serialNumber;
     }
 
     public String getOsVersion() {
@@ -15,6 +18,7 @@ public class Notebook {
     }
 
     public String start() {
-        return null;
+        System.out.println("Notebook "+ this.name +" started");
+        return "Notebook "+ this.name +" started";
     }
 }

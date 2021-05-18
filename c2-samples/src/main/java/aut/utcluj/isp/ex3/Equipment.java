@@ -4,21 +4,25 @@ package aut.utcluj.isp.ex3;
  * @author stefan
  */
 public class Equipment {
-    private String name;
-    private String serialNumber;
-    private String owner;
-    private boolean taken;
+    private String name = null;
+    private String serialNumber = null;
+    private String owner = null;
+    private boolean taken = false;
 
     public Equipment(String serialNumber) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.serialNumber = serialNumber;
     }
 
     public Equipment(String name, String serialNumber) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.name = name;
+        this.serialNumber = serialNumber;
     }
 
     public Equipment(String name, String serialNumber, String owner) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.name = name;
+        this.serialNumber = serialNumber;
+        this.owner = owner;
+        this.taken = true;
     }
 
     public String getName() {
@@ -44,7 +48,8 @@ public class Equipment {
      * @param owner - owner name
      */
     public void provideEquipmentToUser(final String owner) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.owner = owner;
+        this.taken = true;
     }
 
     /**
@@ -53,6 +58,7 @@ public class Equipment {
      * Remove the owner
      */
     public void returnEquipmentToOffice() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.taken = false;
+        this.owner = null;
     }
 }

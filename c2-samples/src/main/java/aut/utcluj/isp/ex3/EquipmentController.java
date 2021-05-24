@@ -16,7 +16,7 @@ public class EquipmentController {
      *
      * @param equipment - equipment to be added
      */
-    public void addEquipment(final Equipment equipment) {
+    public Boolean addEquipment(final Equipment equipment) {
         Boolean isAdded = false;
         
         for (Equipment elements: equipmentList){
@@ -27,9 +27,11 @@ public class EquipmentController {
         
         if(!isAdded){
             equipmentList.add(equipment);
+            return true;
         }
         else{
             System.out.println("\nThis equipment is already added\n");
+            return false;
         }
     }
     
